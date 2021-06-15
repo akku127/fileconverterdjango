@@ -1,5 +1,5 @@
 from django import forms
-from .models import WordFile, Jpgimage
+from .models import WordFile, Jpgimage, Pngimage
 
 
 
@@ -12,3 +12,8 @@ class imageform(forms.ModelForm):
     class Meta:
         model = Jpgimage
         fields = ['jpgfile']
+
+class pngform(forms.ModelForm):
+    class Meta:
+        model = Pngimage
+        fields = ['pngfile']

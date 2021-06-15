@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>.docxConverter</title>
+    <title>Converter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
@@ -49,6 +49,20 @@
           <form action="{% url 'jpgfile' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <p class="card-text">{{jpgform.as_p}}</p>
+            <input class="btn btn-primary" type="submit">
+          </form>
+
+      </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+          .png to jpg
+        </div>
+      <div class="card-body">
+        <h5 class="card-title">Convert png to jpg within seconds</h5>
+          <form action="{% url 'pngfile' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p class="card-text">{{pngform.as_p}}</p>
             <input class="btn btn-primary" type="submit">
           </form>
 

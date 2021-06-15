@@ -11,4 +11,5 @@ class WordFile(models.Model):
 class Jpgimage(models.Model):
     jpgfile = models.FileField(upload_to='images')
 
-
+class Pngimage(models.Model):
+    pngfile = models.FileField(upload_to='images')
